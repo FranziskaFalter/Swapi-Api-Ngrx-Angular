@@ -20,7 +20,6 @@ export class PlanetService {
   getPlanets(searchParam?: string): Observable<Planet[]> {
     let params = new HttpParams();
     params = params.append('search', String(searchParam));
-    // params = params.append('pageNumber', String(pageQuery.pageNumber));
 
     return this.http.get(this.baseUrlDev + '/', {headers: this.headers, params}).pipe(
       map(res => {
@@ -33,8 +32,6 @@ export class PlanetService {
 
   getPlanetById(id: string): Observable<Planet> {
     let params = new HttpParams();
-    // params = params.append('pageSize', String(pageQuery.pageSize));
-    // params = params.append('pageNumber', String(pageQuery.pageNumber));
 
     return this.http.get(this.baseUrlDev + '/' + id + '/', {headers: this.headers, params}).pipe(
       map(res => {

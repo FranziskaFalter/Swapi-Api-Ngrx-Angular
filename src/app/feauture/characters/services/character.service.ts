@@ -31,9 +31,6 @@ export class CharacterService {
 
   getCharacterById(id: string): Observable<Character> {
     let params = new HttpParams();
-    // params = params.append('pageSize', String(pageQuery.pageSize));
-    // params = params.append('pageNumber', String(pageQuery.pageNumber));
-
     return this.http.get(this.baseUrlDev + '/' + id + '/', {headers: this.headers, params}).pipe(
       map(res => {
         return res;

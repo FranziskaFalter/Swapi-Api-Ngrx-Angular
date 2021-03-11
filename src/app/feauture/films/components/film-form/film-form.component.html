@@ -46,10 +46,9 @@
     </div>
     <div class="form-row">
       <div class="form-group  col-md-12 col-xs-12">
-        <label class="col-form-label input-group ">Geschlecht</label>
-        <textarea [ngrxFormControlState]="(formState$|async).controls.description" class="custom-select" id="inputGroupSelect01" readonly rows="4"
-                  style="resize: none;">
-  </textarea>
+        <label class="col-form-label ">Beschreibung</label>
+        <textarea class="form-control" readonly style="resize: none;" id="exampleFormControlTextarea1"
+                  [ngrxFormControlState]="(formState$|async).controls.description" rows="3"></textarea>
       </div>
 
     </div>

@@ -1,0 +1,85 @@
+<div class="modal-header">
+  <div class="align-content-center" style="text-align: center">
+    <h4 autofocus id="modal-basic-title">Character hinzufügen</h4>
+  </div>
+</div>
+<div class="modal-body">
+  <form [ngrxFormState]="(formState$ | async)" novalidate>
+    <div class="form-row">
+      <div class="form-group col-md-12 col-xs-12">
+        <label class="col-form-label">Name</label>
+        <div class="input-group">
+          <input [ngrxFormControlState]="(formState$|async).controls.name" class="form-control "
+                 placeholder="Name eingeben"
+                 readonly type="text"/>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 col-xs-12">
+        <label class="col-form-label ">Größe</label>
+        <input [ngrxFormControlState]="(formState$|async).controls.height" autocomplete="off"
+               class="form-control"
+               placeholder="Meter" readonly
+               type="text"/>
+      </div>
+      <div class="form-group col-md-6 col-xs-12">
+        <label class="col-form-label ">Gewicht</label>
+        <input [ngrxFormControlState]="(formState$|async).controls.mass" autocomplete="off"
+               class="form-control"
+               placeholder="kg" readonly
+               type="text"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 col-xs-12">
+        <label class="col-form-label ">Haarfarbe
+        </label>
+        <input [ngrxFormControlState]="(formState$|async).controls.hairColor" autocomplete="off" class="form-control"
+               placeholder="Haarfarbe eingeben"
+               readonly
+               type="text"/>
+      </div>
+      <div class="form-group col-md-6 col-xs-12 ">
+        <label class="col-form-label ">Augenfarbe</label>
+        <select [ngrxFormControlState]="(formState$|async).controls.eyeColor" class="custom-select"
+                id="inputGroupSelect02">
+          <option selected>Gelb</option>
+          <option value="1">Grün</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 col-xs-12">
+        <label class="col-form-label ">Geburtsjahr
+        </label>
+        <input [ngrxFormControlState]="(formState$|async).controls.birthDate" autocomplete="off"
+               class="form-control"
+               placeholder="YYYY" readonly
+               type="text"/>
+      </div>
+      <div class="form-group  col-md-6 col-xs-12">
+        <label class="col-form-label input-group ">Geschlecht</label>
+        <select [ngrxFormControlState]="(formState$|async).controls.gender" class="custom-select"
+                id="inputGroupSelect01">
+          <option selected>Weiblich</option>
+          <option value="1">Männlich</option>
+        </select>
+      </div>
+    </div>
+
+
+  </form>
+</div>
+<div class="modal-footer">
+  <div class=" float-right">
+    <div class="row">
+      <div class="col-6 btn-group">
+        <button (click)="close()" class="btn btn-outline-dark mr-4" type="button">Abbrechen</button>
+        <button (click)="saveSettings()" class="btn btn-dark ">
+          Speichern
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div style="margin-left:20%; margin-right:20%">
+  <div style="margin-bottom: 5%;margin-top:4%">
+    <h4 class="text-center" style="font-weight: lighter ;letter-spacing:-1px">Planetendetails</h4>
+    <hr style="width: 4%; border: 1px solid grey">
+    <h1 class="text-center" style="font-size: 55px; letter-spacing: -1.5px; font-weight: bold">{{planet?.name}}</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="row"><h4>Details:</h4></div>
+      <div class="row"><b> Type</b> :{{planet?.terrain}}</div>
+      <div class="row"><b> Terrain </b>:{{planet?.terrain}}</div>
+      <div class="row"><b> Oberfläche </b>:{{planet?.surface_water}}</div>
+      <div class="row"><b> Population </b>:{{planet?.population}}</div>
+      <app-character-link-list [arrayOfCharacters]="planet?.residents"
+                               class="mt-5"></app-character-link-list>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <img alt="..."
+           class="" src="https://cdn.pixabay.com/photo/2015/09/09/20/14/lego-933036_960_720.jpg" style="width: 100%;height: auto; margin-left: 20%">
+    </div>
+  </div>
+  <app-film-link-list [arrayOfFilms]="planet?.films"></app-film-link-list>
+</div>

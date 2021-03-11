@@ -1,0 +1,35 @@
+<div style="margin-left:20%; margin-right:20%">
+  <div style="margin-bottom: 5%;margin-top:4%">
+    <h4 class="text-center" style="font-weight: lighter ;letter-spacing:-1px">Charackterdetails</h4>
+    <hr style="width: 4%; border: 1px solid grey">
+    <h1 class="text-center" style="font-size: 55px; letter-spacing: -1.5px; font-weight: bold">{{character?.name}}</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="row"><h4>Details:</h4></div>
+      <div class="row"><b> Größe</b> :{{character?.height}}</div>
+      <div class="row"><b> Gewicht </b>:{{character?.mass}}</div>
+      <div class="row"><b> Haarfarbe </b>:{{character?.hair_color}}</div>
+      <div class="row"><b> Augenfarbe</b> :{{character?.eye_color}}</div>
+      <div class="row"><b> Geburtsjahr </b>:{{character?.birth_year}}</div>
+      <div class="row"><b> Geschlecht </b>:{{character?.gender}}</div>
+      <app-planet-link-list [arrayOfPlanets]="[character?.homeworld]" class="mt-2"></app-planet-link-list>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img alt="..."
+           class="" src="https://cdn.pixabay.com/photo/2015/09/09/20/14/lego-933036_960_720.jpg" style="width: 100%;height: auto;">
+    </div>
+  </div>
+  <div class="d-flex">
+    <app-film-link-list [arrayOfFilms]="character?.films"></app-film-link-list>
+  </div>
+  <div class="d-flex">
+    <app-vehicle-link-list [arrayOfVehicles]="character?.vehicles"></app-vehicle-link-list>
+  </div>
+  <div class="d-flex">
+    <app-species-link-list [arrayOfSpecies]="character?.species"></app-species-link-list>
+  </div>
+  <div class="d-flex">
+    <app-spaceship-link-list [arrayOfSpaceships]="character?.starships"></app-spaceship-link-list>
+  </div>
+</div>

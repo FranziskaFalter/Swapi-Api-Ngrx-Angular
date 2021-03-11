@@ -1,0 +1,13 @@
+<div *ngIf="arrayOfCharacters?.length>0" class="row">
+  <h4>Charaktere:</h4></div>
+<div class="row ">
+  <ng-container *ngFor="let element of arrayOfCharacters; let i = index">
+    <a *ngIf="i<4" class="list-group-item link-style"
+       routerLink="/character/{{loadingService.split(element)}}"
+    >{{getCharacterName(element)|async}} <br>
+    </a>
+  </ng-container>
+  <a *ngIf="arrayOfCharacters?.length>0" class="list-group-item link-style" routerLink="/character/">...<br>
+  </a>
+</div>
+

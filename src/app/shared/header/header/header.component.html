@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand navbar-light" style="margin-left: 18%; margin-right:15%;">
+  <div class="navbar-brand">
+    <img alt="" src="https://www.logo.wine/a/logo/Star_Wars/Star_Wars-Logo.wine.svg"
+         style="width:100px; height : auto;margin-top:2%;"></div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item">
+        <a [routerLink]="['/home' ]" aria-current="page" class="nav-link " href="#" routerLinkActive="active">Star
+          Wars</a>
+      </li>
+      <li class="nav-item ml-4 mr-4 ">
+        <a [routerLink]="['/film' ]" class="nav-link " href="#" routerLinkActive="active">Filme</a>
+      </li>
+      <li class="nav-item ml-4 mr-4">
+        <a [routerLink]="['/character' ]" aria-current="page" class="nav-link " href="#"
+           routerLinkActive="active">Charaktere</a>
+      </li>
+      <li class="nav-item ml-4 mr-4">
+        <a [routerLink]="['/planet' ]" aria-current="page" class="nav-link " href="#"
+           routerLinkActive="active">Planeten</a>
+      </li>
+    </ul>
+    <form class="form-inline my-3 my-lg-0">
+      <input (ngModelChange)="search()" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" class="form-control"
+             placeholder="Suchen" type="search"/>
+    </form>
+  </div>
+</nav>
+<hr>

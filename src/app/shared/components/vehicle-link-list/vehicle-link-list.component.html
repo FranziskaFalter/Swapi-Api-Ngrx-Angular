@@ -1,0 +1,10 @@
+<div *ngIf="arrayOfVehicles?.length>0" class="row">
+  <h4>Fahrzeuge:</h4></div>
+<div class="row ">
+  <ng-container *ngFor="let vehicles of arrayOfVehicles ; let i = index">
+    <div *ngIf="i<4" class="list-group-item link-style"> {{getVehiclesName(vehicles)|async}}<br>
+    </div>
+  </ng-container>
+  <div *ngIf="arrayOfVehicles?.length>0" class="list-group-item link-style">...<br>
+  </div>
+</div>

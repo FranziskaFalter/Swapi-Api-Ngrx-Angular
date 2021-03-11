@@ -1,0 +1,12 @@
+<div *ngIf="arrayOfFilms?.length>0" class="row">
+  <h4>Filme:</h4></div>
+<div class="row ">
+  <ng-container *ngFor="let film of arrayOfFilms">
+    <a class="list-group-item link-style"
+       routerLink="/film/{{loadingService.split(film) }}"
+    >{{getFilmNames(film)|async}} <br>
+    </a>
+  </ng-container>
+  <a *ngIf="arrayOfFilms?.length>0" class="list-group-item link-style" routerLink="/film/">...<br>
+  </a>
+</div>

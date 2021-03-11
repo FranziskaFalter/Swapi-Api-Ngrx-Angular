@@ -1,0 +1,17 @@
+<div class="" style="width: 25rem; height: 30%;margin-bottom: 4%; margin-right: 5%">
+  <div class="">
+    <img (click)="open()"
+         alt="..." class="card-img-top" src="https://cdn.pixabay.com/photo/2015/09/09/20/14/lego-933036_960_720.jpg" style="width: 100%;height: auto;cursor: pointer">
+  </div>
+  <div class="card-body" style="background-color: #EFEFEF">
+    <h5 class="card-title">{{character.name}}</h5>
+    <div>Haarfarbe: {{character.hair_color}}</div>
+    <div>Geschlecht: {{character.gender}}</div>
+    <div>Geburtsjahr {{character.birth_year}}</div>
+  </div>
+  <a href=""
+     routerLink="/character/{{ loadingService.split(character.url)}}"
+     style="font-size: x-small;font-weight: bold; color:black"> Mehr
+    Information....</a>
+</div>
+

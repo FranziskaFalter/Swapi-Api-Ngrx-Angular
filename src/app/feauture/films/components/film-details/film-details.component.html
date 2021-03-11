@@ -1,0 +1,36 @@
+<div style="margin-left:20%; margin-right:20%">
+  <div style="margin-bottom: 5%;margin-top:4%">
+    <h4 class="text-center" style="font-weight: lighter ;letter-spacing:-1px">Filmdetails</h4>
+    <hr style="width: 4%; border: 1px solid grey">
+    <h1 class="text-center" style="font-size: 55px; letter-spacing: -1.5px; font-weight: bold">{{film?.title}}</h1>
+    <h2 class="text-center font-weight-light" style="font-size: 23px;"> Episode {{romanize(film?.episode_id)}}</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="row"><h4>Details:</h4></div>
+      <div class="row"><b>Director</b> :{{film?.director}}</div>
+      <div class="row"><b> Produzenten </b>:{{film?.producer}}</div>
+      <div class="row"><b> Erscheinungsdatum </b>:{{film?.release_date|date :'dd.MM.YYYY'}}</div>
+      <div class="row" style="margin-top: 5%; margin-bottom: 5%">{{film?.opening_crawl}}</div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <img alt="..."
+           class="" src="https://cdn.pixabay.com/photo/2015/09/09/20/14/lego-933036_960_720.jpg" style="width: 100%;height: auto">
+    </div>
+
+
+  </div>
+  <div class="d-flex">
+    <app-character-link-list [arrayOfCharacters]="film?.characters"></app-character-link-list>
+  </div>
+  <div class="d-flex">
+    <app-vehicle-link-list [arrayOfVehicles]="film?.vehicles"></app-vehicle-link-list>
+  </div>
+  <div class="d-flex">
+    <app-species-link-list [arrayOfSpecies]="film?.species"></app-species-link-list>
+  </div>
+  <div class="d-flex">
+    <app-spaceship-link-list [arrayOfSpaceships]="film?.starships"></app-spaceship-link-list>
+  </div>
+</div>

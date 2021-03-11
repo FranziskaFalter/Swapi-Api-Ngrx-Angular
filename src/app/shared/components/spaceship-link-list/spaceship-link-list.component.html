@@ -1,0 +1,12 @@
+<div *ngIf="arrayOfSpaceships?.length>0" class="row">
+  <h4>Raumschiffe:</h4></div>
+<div class="row ">
+
+  <ng-container *ngFor="let spaceship of arrayOfSpaceships let i=index">
+    <div *ngIf="i<4" class="list-group-item link-style">{{getSpaceshipsName(spaceship)|async}}<br>
+    </div>
+  </ng-container>
+  <div *ngIf="arrayOfSpaceships?.length>0" class="list-group-item link-style">...<br>
+  </div>
+</div>
+

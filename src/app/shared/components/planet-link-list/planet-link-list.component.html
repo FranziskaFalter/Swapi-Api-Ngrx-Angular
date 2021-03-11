@@ -1,0 +1,11 @@
+<div *ngIf="arrayOfPlanets?.length>=0" class="row">
+  <h4>Heimatplanet :</h4></div>
+<div class="row ">
+  <ng-container *ngFor="let planets of arrayOfPlanets ; let i = index">
+    <a *ngIf="i<4" class="list-group-item link-style"
+       routerLink="/planet/{{loadingService.split(planets)}}">{{getPlanetName(planets)|async}}<br>
+    </a>
+  </ng-container>
+  <a *ngIf="arrayOfPlanets?.length>=0" class="list-group-item link-style" routerLink="/planet/">...<br>
+  </a>
+</div>

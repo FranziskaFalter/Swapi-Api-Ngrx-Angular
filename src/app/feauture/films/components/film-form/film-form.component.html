@@ -1,0 +1,70 @@
+<div class="modal-header">
+  <div class="align-content-center" style="text-align: center">
+    <h4 autofocus id="modal-basic-title">Film hinzufügen</h4>
+  </div>
+</div>
+<div class="modal-body">
+  <form [ngrxFormState]="(formState$ | async)" novalidate>
+    <div class="form-row">
+      <div class="form-group col-md-12 col-xs-12">
+        <label class="col-form-label">Titel</label>
+        <div class="input-group">
+          <input [ngrxFormControlState]="(formState$|async).controls.title" class="form-control "
+                 placeholder="Titel eingeben"
+                 readonly type="text"/>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12 col-xs-12">
+        <label class="col-form-label ">Director</label>
+        <input [ngrxFormControlState]="(formState$|async).controls.director" autocomplete="off"
+               class="form-control"
+               placeholder="Director eingeben" readonly
+               type="text"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12 col-xs-12 ">
+        <label class="col-form-label ">Produzent</label>
+        <select [ngrxFormControlState]="(formState$|async).controls.producer" class="custom-select"
+                id="inputGroupSelect02">
+          <option selected>George Lucas</option>
+          <option value="1">Niemand</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6 col-xs-12">
+        <label class="col-form-label ">Erscheinungsjahr
+        </label>
+        <input [ngrxFormControlState]="(formState$|async).controls.releaseDate" autocomplete="off"
+               class="form-control"
+               placeholder="YYYY" readonly
+               type="text"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group  col-md-12 col-xs-12">
+        <label class="col-form-label input-group ">Geschlecht</label>
+        <textarea [ngrxFormControlState]="(formState$|async).controls.description" class="custom-select" id="inputGroupSelect01" readonly rows="4"
+                  style="resize: none;">
+  </textarea>
+      </div>
+
+    </div>
+
+  </form>
+</div>
+<div class="modal-footer">
+  <div class=" float-right">
+    <div class="row">
+      <div class="col-6 btn-group">
+        <button (click)="close()" class="btn btn-outline-dark mr-4" type="button">Abbrechen</button>
+        <button (click)="saveSettings()" class="btn btn-dark ">
+          Speichern
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

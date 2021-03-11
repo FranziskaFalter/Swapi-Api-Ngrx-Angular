@@ -1,0 +1,9 @@
+<div *ngIf="arrayOfSpecies?.length>0" class="row ">
+  <h4>Specie:</h4></div>
+<div class="row ">
+  <ng-container *ngFor="let species of arrayOfSpecies ; let i = index">
+    <div *ngIf="i<4" class="list-group-item link-style">{{getSpeciesName(species)|async}}<br></div>
+  </ng-container>
+  <div *ngIf="arrayOfSpecies?.length>0" class="list-group-item link-style">...<br>
+  </div>
+</div>

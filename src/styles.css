@@ -1,0 +1,14 @@
+@import "~@fortawesome/fontawesome-free/css/all.css"; /* You can add global styles to this file, and also import other style files */
+
+.link-style {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: #EFEFEF;
+  margin: 0 10px 10px 0;
+  border: none;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}

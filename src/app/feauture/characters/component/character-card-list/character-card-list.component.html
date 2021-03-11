@@ -1,0 +1,14 @@
+<div style="margin-left: 19%;margin-right: 10% ">
+  <h2 class="font-weight-bold"
+      style="font-size: 55px; text-align:center; margin-right: 10%; padding-bottom:5%;padding-top:5%;letter-spacing: -0.4px; ">
+    Charaktere</h2>
+  <div>
+
+
+    <div class="card-group ">
+      <ng-container *ngFor=" let character of characters">
+        <app-character-card [character]="character" class="ml-3"></app-character-card>
+      </ng-container>
+    </div>
+  </div>
+</div>

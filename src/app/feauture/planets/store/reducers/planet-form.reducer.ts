@@ -5,24 +5,20 @@ import * as featurePlanetFormActions from './../action/planet-form.actions';
 
 export interface PlanetForm {
   name: string;
-  mass: string;
-  height: string;
-  hairColor: string;
-  eyeColor: string;
-  birthDate: string;
-  gender: string;
+  type: string;
+  createdBy: string;
+  genre: string;
+  races: string;
 }
 
 export const FORM_ID = 'planet-form';
 
 const initialFormState: PlanetForm = {
-  name: 'string',
-  mass: 'string',
-  height: 'string',
-  hairColor: 'string',
-  eyeColor: 'string',
-  birthDate: 'string',
-  gender: 'string',
+  name: '',
+  type: '',
+  createdBy: '',
+  genre: '',
+  races: '',
 };
 
 export interface PlanetFormState {

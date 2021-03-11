@@ -3,6 +3,7 @@ import {Planet} from '../../models/planet';
 import {FilmFormComponent} from '../../../films/components/film-form/film-form.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {LoadingService} from '../../../../shared/services/loading.service';
+import {PlanetFormComponent} from '../planet-form/planet-form.component';
 
 @Component({
   selector: 'app-planet-card',
@@ -21,6 +22,6 @@ export class PlanetCardComponent implements OnInit {
   }
 
   open(): void {
-    this.modalService.open(FilmFormComponent);
+    this.modalService.open(PlanetFormComponent);
   }
 }
